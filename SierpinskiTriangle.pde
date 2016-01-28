@@ -27,7 +27,7 @@ public void sierpinski(float x, float y, float len, int colour)
 	// if(colour % 2 == 0){
 	// 	fill(0);
 	// } else fill(255);
-	if(len>20){
+	if(len>100){
 		stroke(0);
 		triangle(x, y, x+half, y, x+quarter, y-hi);
 		triangle(x+half, y, x+len, y, x+half+quarter, y-hi);
