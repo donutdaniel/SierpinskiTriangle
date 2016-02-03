@@ -6,7 +6,7 @@ public void setup()
 }
 public void draw()
 {
-	background(255);
+	background(40,130,255);
 	sierpinski(0, (float)(800*(Math.sqrt(3)/2)), 800+inc, 1);
 	inc+=5;
 
@@ -15,19 +15,19 @@ public void draw()
 	}
 
 }
-public void mouseDragged()//optional
-{
-
+public void mouseDragged(){
+ inc += 10;
 }
+
 public void sierpinski(float x, float y, float len, int colour) 
 {
 	float hi = (float)((Math.sqrt(3)/2)*(len/2));
 	float half = len/2;
 	float quarter = len/4;
-	// if(colour % 2 == 0){
-	// 	fill(0);
-	// } else fill(255);
-	if(len>100){
+	if(colour % 2 == 0){
+		fill(0);
+	} else fill(255);
+	if(len>50){
 		stroke(0);
 		triangle(x, y, x+half, y, x+quarter, y-hi);
 		triangle(x+half, y, x+len, y, x+half+quarter, y-hi);
